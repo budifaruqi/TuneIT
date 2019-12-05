@@ -7,8 +7,9 @@
         <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title><?= $title ?></title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </head>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      </head>
     <body>
         <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
                 <a class="navbar-brand" href="/">TuneIT</a>
@@ -29,7 +30,7 @@
                   </ul>
                 </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container">
             
 
 <div class="row mb-4">
@@ -37,7 +38,7 @@
 </div>
 
 <?php if ($tanda == 'standard') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="dropdown mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -53,46 +54,65 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="e-0"></button>
+    <button class="lni-reload" data-audio="e-0"></button>
+    <button class="lni-stop" data-audio="e-0"></button>
     <span class="col-3">E</span>
+    <audio id="e-0">
+        <source src="/audio/e-0.mp3" type="audio/mpeg">
+    </audio>
+         
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="a-1"></button>
+    <button class="lni-reload" data-audio="a-1"></button>
+    <button class="lni-stop" data-audio="a-1"></button>
     <span class="col-3">A</span>
+    <audio id="a-1">
+        <source src="/audio/a-1.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="d-2"></button>
+    <button class="lni-reload" data-audio="d-2"></button>
+    <button class="lni-stop" data-audio="d-2"></button>
     <span class="col-3">D</span>
+    <audio id="d-2">
+        <source src="/audio/d-2.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="g-3"></button>
+    <button class="lni-reload" data-audio="g-3"></button>
+    <button class="lni-stop" data-audio="g-3"></button>
     <span class="col-3">G</span>
+    <audio id="g-3">
+    <source src="/audio/g-3.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="b-4"></button>
+    <button class="lni-reload" data-audio="b-4"></button>
+    <button class="lni-stop" data-audio="b-4"></button>
     <span class="col-3">B</span>
+    <audio id="b-4">
+    <source src="/audio/b-4.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">E</span>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="e-5"></button>
+    <button class="lni-reload" data-audio="e-5"></button>
+    <button class="lni-stop" data-audio="e-5"></button>
+    <span class="col-3">A</span>
+    <audio id="e-5">
+    <source src="/audio/e-5.mp3" type="audio/mpeg">
+    </audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'half') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -108,46 +128,64 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="d#0"></button>
+    <button class="lni-reload" data-audio="d#0"></button>
+    <button class="lni-stop" data-audio="d#0"></button>
     <span class="col-3">D#</span>
+    <audio id="d#0">
+    <source src="/audio/d-sharp-0.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="g#1"></button>
+    <button class="lni-reload" datg#audio="g#1"></button>
+    <button class="lni-stop" data-audio="g#1"></button>
     <span class="col-3">G#</span>
+    <audio id="g#1">
+    <source src="/audio/g-sharp-1.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+    <div class="row mb-2">
+    <button class="lni-play" data-audio="c#2"></button>
+    <button class="lni-reload" data-audio="c#2"></button>
+    <button class="lni-stop" data-audio="c#2"></button>
     <span class="col-3">C#</span>
+    <audio id="c#2">
+    <source src="/audio/c-sharp-2.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="f#3"></button>
+    <button class="lni-reload" data-audio="f#3"></button>
+    <button class="lni-stop" data-audio="f#3"></button>
     <span class="col-3">F#</span>
+    <audio id="f#3">
+    <source src="/audio/f-sharp-3.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+    <div class="row mb-2">
+    <button class="lni-play" data-audio="a#4"></button>
+    <button class="lni-reload" data-audio="a#4"></button>
+    <button class="lni-stop" data-audio="a#4"></button>
     <span class="col-3">A#</span>
+    <audio id="a#4">
+    <source src="/audio/a-sharp-4.mp3" type="audio/mpeg">
+    </audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
+<div class="row mb-2">
+    <button class="lni-play" data-audio="d#5"></button>
+    <button class="lni-reload" data-audio="d#5"></button>
+    <button class="lni-stop" data-audio="d#5"></button>
     <span class="col-3">D#</span>
+    <audio id="d#5">
+    <source src="/audio/d-sharp-5.mp3" type="audio/mpeg">
+    </audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'dropD') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -163,46 +201,65 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="e-0"></button>
+<button class="lni-reload" data-audio="e-0"></button>
+<button class="lni-stop" data-audio="e-0"></button>
+<span class="col-3">D</span>
+<audio id="e-0">
+<source src="/audio/e-0.mp3" type="audio/mpeg">
+</audio>
+
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">A</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">A</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">B</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">B</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">E</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">E</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'dagad') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -218,46 +275,65 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="e-0"></button>
+<button class="lni-reload" data-audio="e-0"></button>
+<button class="lni-stop" data-audio="e-0"></button>
+<span class="col-3">D</span>
+<audio id="e-0">
+<source src="/audio/e-0.mp3" type="audio/mpeg">
+</audio>
+
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">A</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">A</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">A</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">A</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'whole') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -273,46 +349,65 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="e-0"></button>
+<button class="lni-reload" data-audio="e-0"></button>
+<button class="lni-stop" data-audio="e-0"></button>
+<span class="col-3">D</span>
+<audio id="e-0">
+<source src="/audio/e-0.mp3" type="audio/mpeg">
+</audio>
+
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">C</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">C</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">F</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">F</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">A</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">A</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'openC') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -328,46 +423,65 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">C</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="e-0"></button>
+<button class="lni-reload" data-audio="e-0"></button>
+<button class="lni-stop" data-audio="e-0"></button>
+<span class="col-3">C</span>
+<audio id="e-0">
+<source src="/audio/e-0.mp3" type="audio/mpeg">
+</audio>
+
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">C</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">C</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">C</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">C</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">E</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">E</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'openD') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -383,46 +497,65 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="e-0"></button>
+<button class="lni-reload" data-audio="e-0"></button>
+<button class="lni-stop" data-audio="e-0"></button>
+<span class="col-3">D</span>
+<audio id="e-0">
+<source src="/audio/e-0.mp3" type="audio/mpeg">
+</audio>
+
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">A</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">A</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">F#</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">F#</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">A</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">A</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
 <?php } ?>
 
 <?php if ($tanda == 'openG') { ?>
-<div class="btn-group mb-2 col-4">
+<div class="btn-group mb-2 offset-11">
     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Tuning
     </button>
@@ -438,48 +571,97 @@
     </div>
 </div>
 
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="e-0"></button>
+<button class="lni-reload" data-audio="e-0"></button>
+<button class="lni-stop" data-audio="e-0"></button>
+<span class="col-3">D</span>
+<audio id="e-0">
+<source src="/audio/e-0.mp3" type="audio/mpeg">
+</audio>
+
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">G</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">G</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">B</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">B</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
-<div class="row">
-    <button class="lni-play"></button>
-    <button class="lni-reload"></button>
-    <button class="lni-stop"></button>
-    <span class="col-3">D</span>
+<div class="row mb-2">
+<button class="lni-play" data-audio="a-1"></button>
+<button class="lni-reload" data-audio="a-1"></button>
+<button class="lni-stop" data-audio="a-1"></button>
+<span class="col-3">D</span>
+<audio id="a-1">
+<source src="/audio/a-1.mp3" type="audio/mpeg">
+</audio>
 </div>
 <?php } ?>
 
-
         </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+<script>
+$('.lni-play').click(function(){
+    audio = $(this).data('audio')
+    // console.log(audio)
+    test = $('#'+audio).get(0).play()
+    console.log(test)
+})
+$('.lni-reload').click(function(){
+    audio = $(this).data('audio')
+    var sound = $('#'+audio)
+    console.log(sound)
+    // sound.addEventListener('ended', function(){
+    //     this.currentTime = 0;
+    //     this.play();
+    // }, false);
+    // console.log(audio)
+    // test = $('#'+audio).get(0).play()
+    sound.get(0).loop = true
+    sound.get(0).play()
+})
+$('.lni-stop').click(function(){
+    audio = $(this).data('audio')
+    // console.log(audio)
+    test = $('#'+audio).get(0).pause()
+    this.currentTime = 0
+    console.log(test)
+})
+
+</script>
+
+      </body>
 </html>
